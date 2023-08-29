@@ -27,7 +27,7 @@ Relaciones:
 	""",
 	
 	"depends": [
-		"contacts",
+		"contacts", "account",
 	],
 	"data": [
 		"views/municipality_view.xml",

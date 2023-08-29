@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="partner_municipality_form">
+		<field name="name">Contacto</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="account.view_partner_property_form"/>
+		<field name="arch" type="xml">
+			<field name="state_id" position="before">
+				<field name="municipality_id" placeholder="Municipio"/>
+			</field>
+		</field>
+	</record>
+	
+	<record model="ir.ui.view" id="partner_municipality_childs_form">
+		<field name="name">view_partner_l10n_sv</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='child_ids']/form//field[@name='state_id']" position="before">
+				<field name="municipality_id" placeholder="Municipio"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>
+    

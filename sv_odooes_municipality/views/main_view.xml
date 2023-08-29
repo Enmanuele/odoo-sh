@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<menuitem action="res_municipality_action" id="municipality_menu" name="Municipios" parent="contacts.menu_localisation" sequence="5"/>
+</odoo>

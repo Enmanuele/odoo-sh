@@ -16,3 +16,9 @@ class MotorcycleRegistry(models.Model):
 	registry_number = fields.Char('Numero de registro')
 	vehicle_image = fields.Binary('Foto del Vehiculo')
 	vin = fields.Char('Numero de registro', required=True)
+	
+	_sql_constraints = [
+		('vin_unique', 'UNIQUE(vin)', 'VIN debe ser único')
+	]
+	
+	

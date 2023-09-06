@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_motorcycle_registry,access_motorcycle_registry,model_motorcycle_registry,base.group_user,1,1,1,1
+access_motorcycle_registry_admin,access_motorcycle_registry_admin,model_motorcycle_registry,motorcycle_registry.motor_group_admin,1,1,1,1
+access_motorcycle_registry_user,access_motorcycle_registry_user,model_motorcycle_registry,motorcycle_registry.motor_group_user,1,0,1,0

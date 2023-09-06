@@ -19,6 +19,7 @@ This Module is used to keep track of the Motorcycle Registration and Ownership o
 		"base",
 	],
 	"data": [
+		"security/ir.model.access.csv",
 		"data/demo.xml",
 	],
 	"demo": [

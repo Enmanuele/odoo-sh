@@ -21,6 +21,7 @@ This Module is used to keep track of the Motorcycle Registration and Ownership o
 	"data": [
 	],
 	"demo": [
+		"data/demo.xml",
 	],
 	"images": [
 	],

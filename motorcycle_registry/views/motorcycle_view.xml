@@ -70,6 +70,6 @@
 		</field>
 	</record>
 	
-	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas"/>
+	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas" web_icon="motorcycle_registry,static/description/icon.png"/>
 	<menuitem action="motorcycle_registry_action" id="motorcycle_registry_menu" name="Registro" parent="motorcycle_main_menu"/>
 </odoo>

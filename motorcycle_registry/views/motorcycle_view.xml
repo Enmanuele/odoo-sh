@@ -36,6 +36,34 @@
 		</field>
 	</record>
 	
+	<record id="motorcycle_registry_form" model="ir.ui.view">
+		<field name="name">Registro de motocicletas</field>
+		<field name="model">motorcycle.registry</field>
+		<field name="arch" type="xml">
+			<form string="Registro de motocicletas">
+				<sheet>
+					<group>
+						<group>
+							<field name="registry_number"/>
+						</group>
+						<group>
+						<field name="vehicle_image"/>
+						</group>
+					</group>
+					<group string="Grupo UNO">
+					</group>
+					<group string="Grupo DOS">
+					</group>
+					<notebook>
+                        <page string="Titulo de certificado">
+							<field name="certificate_title"/>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
 	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas"/>
 	<menuitem action="motorcycle_registry_action" id="motorcycle_registry_menu" name="Registro" parent="motorcycle_main_menu"/>
 </odoo>

@@ -16,7 +16,7 @@
 				<field name="last_name"/>
 				<field name="license_plate"/>
 				<filter string="Fecha de Registro" name="filter_registry_date" date="registry_date"/>
-				<filter string="Fecha de Registro" name="groupby_registry_date"/>
+				<filter string="Fecha de Registro" name="groupby_registry_date" context="{'group_by':'registry_date'}"/>
 			</search>
 		</field>
 	</record>

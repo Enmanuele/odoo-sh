@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="motorcycle_registry_action" model="ir.actions.act_window">
+		<field name="name">Registro de motocicletas</field>
+		<field name="res_model">motorcycle.registry</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="motorcycle_registry_search" model="ir.ui.view">
+		<field name="name">Registro de motocicletas</field>
+		<field name="model">motorcycle.registry</field>
+		<field name="arch" type="xml">
+			<search string="Búsqueda de parametros">
+				<field name="registry_number"/>
+				<field name="vin"/>
+				<field name="last_name"/>
+				<field name="license_plate"/>
+				<filter string="Fecha de Registro" name="filter_registry_date" date="registry_date"/>
+				<filter string="Fecha de Registro" name="groupby_registry_date" context="{'group_by':'registry_date'}"/>
+			</search>
+		</field>
+	</record>
+	
+	<record id="motorcycle_registry_tree" model="ir.ui.view">
+		<field name="name">Registro de motocicletas</field>
+		<field name="model">motorcycle.registry</field>
+		<field name="arch" type="xml">
+			<tree string="Registro de motocicletas">
+				<field name="registry_number"/>
+				<field name="vin"/>
+				<field name="license_plate"/>
+				<field name="first_name"/>
+				<field name="last_name"/>
+				
+			</tree>
+		</field>
+	</record>
+	
+	<record id="motorcycle_registry_form" model="ir.ui.view">
+		<field name="name">Registro de motocicletas</field>
+		<field name="model">motorcycle.registry</field>
+		<field name="arch" type="xml">
+			<form string="Registro de motocicletas">
+				<sheet>
+					<group>
+						<group>
+							<field name="registry_number"/>
+						</group>
+						<group>
+						<field name="vehicle_image" widget="image" class="oe_avatar"/>
+						</group>
+					</group>
+					<group string="Grupo UNO">
+						<field name="first_name"/>
+						<field name="last_name"/>
+					</group>
+					<group string="Grupo DOS">
+						<field name="current_mileage"/>
+						<field name="license_plate"/>
+						<field name="registry_date"/>
+						<field name="vin"/>
+					</group>
+					<notebook>
+                        <page string="Titulo de certificado">
+							<field name="certificate_title" widget="image" class="oe_avatar"/>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas" web_icon="motorcycle_registry,static/description/icon.png"/>
+	<menuitem action="motorcycle_registry_action" id="motorcycle_registry_menu" name="Registro" parent="motorcycle_main_menu"/>
+</odoo>

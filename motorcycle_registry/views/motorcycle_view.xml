@@ -47,16 +47,22 @@
 							<field name="registry_number"/>
 						</group>
 						<group>
-						<field name="vehicle_image"/>
+						<field name="vehicle_image" widget="image"/>
 						</group>
 					</group>
 					<group string="Grupo UNO">
+						<field name="first_name"/>
+						<field name="last_name"/>
 					</group>
 					<group string="Grupo DOS">
+						<field name="current_mileage"/>
+						<field name="license_plate"/>
+						<field name="registry_date"/>
+						<field name="vin"/>
 					</group>
 					<notebook>
                         <page string="Titulo de certificado">
-							<field name="certificate_title"/>
+							<field name="certificate_title" widget="image"/>
 						</page>
 					</notebook>
 				</sheet>

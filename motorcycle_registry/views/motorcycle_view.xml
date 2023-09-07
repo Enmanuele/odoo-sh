@@ -11,7 +11,6 @@
 		<field name="model">motorcycle.registry</field>
 		<field name="arch" type="xml">
 			<search string="Búsqueda de parametros">
-				<field name="registry_number"/>
 				<field name="vin"/>
 				<field name="last_name"/>
 				<field name="license_plate"/>
@@ -26,7 +25,6 @@
 		<field name="model">motorcycle.registry</field>
 		<field name="arch" type="xml">
 			<tree string="Registro de motocicletas">
-				<field name="registry_number"/>
 				<field name="vin"/>
 				<field name="license_plate"/>
 				<field name="first_name"/>
@@ -70,6 +68,9 @@
 		</field>
 	</record>
 	
-	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas" web_icon="motorcycle_registry,static/description/icon.png"/>
-	<menuitem action="motorcycle_registry_action" id="motorcycle_registry_menu" name="Registro" parent="motorcycle_main_menu"/>
+	<menuitem id="motorcycle_main_menu" name="Registro de Motocicletas" web_icon="motorcycle_registry,static/description/icon.png">
+		<menuitem id="motorcycle_menu" name="Registro de Motocicletas">
+			<menuitem action="motorcycle_registry_action" id="motorcycle_registry_menu" name="Registro"/>
+		</menuitem>
+	</menuitem>
 </odoo>

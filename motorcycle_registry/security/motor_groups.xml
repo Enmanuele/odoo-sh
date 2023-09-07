@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-	<data noupdate="0">
-		
+	<data noupdate="1">
 		<record id="motor_group_user" model="res.groups">
 			<field name="name">Registry User</field>
 			<field name="category_id" ref="motorcycle_registry.motor_category"/>

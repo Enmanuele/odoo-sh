@@ -11,6 +11,7 @@
 		<field name="model">motorcycle.registry</field>
 		<field name="arch" type="xml">
 			<search string="Búsqueda de parametros">
+				<field name="registry_number"/>
 				<field name="vin"/>
 				<field name="last_name"/>
 				<field name="license_plate"/>
@@ -25,11 +26,11 @@
 		<field name="model">motorcycle.registry</field>
 		<field name="arch" type="xml">
 			<tree string="Registro de motocicletas">
+				<field name="registry_number"/>
 				<field name="vin"/>
 				<field name="license_plate"/>
 				<field name="first_name"/>
 				<field name="last_name"/>
-				
 			</tree>
 		</field>
 	</record>

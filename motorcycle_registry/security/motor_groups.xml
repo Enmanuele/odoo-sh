@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-	<data noupdate="1">
+	<data noupdate="0">
 		
 		<record id="motor_group_user" model="res.groups">
 			<field name="name">Registry User</field>
@@ -13,7 +13,8 @@
 		</record>
 		<!-- Agregar por defecto usuario admin a nuestro grupo -->
 		<record id="base.user_admin" model="res.users">
-			<field name="groups_id" eval="[Command.link(ref('motorcycle_registry.motor_group_admin'))]"/>
+			<!-- <field name="groups_id" eval="[Command.link(ref('motorcycle_registry.motor_group_admin'))]"/> -->
+			<field name="groups_id" eval="[(4, ref('motorcycle_registry.motor_group_admin'))]"/>
 		</record>
 	</data>
 </odoo>

@@ -47,7 +47,7 @@
 							<field name="registry_number"/>
 						</group>
 						<group>
-						<field name="vehicle_image" widget="image"/>
+						<field name="vehicle_image" widget="image" class="oe_avatar"/>
 						</group>
 					</group>
 					<group string="Grupo UNO">
@@ -62,7 +62,7 @@
 					</group>
 					<notebook>
                         <page string="Titulo de certificado">
-							<field name="certificate_title" widget="image"/>
+							<field name="certificate_title" widget="image" class="oe_avatar"/>
 						</page>
 					</notebook>
 				</sheet>

@@ -15,8 +15,8 @@
 				<field name="vin"/>
 				<field name="last_name"/>
 				<field name="license_plate"/>
-				<filter string="Fecha de Registro" name="filter_registry_date" domain="[('registry_date', '!=', False)]"/>
-				<filter string="Fecha de Registro" name="group_registry_date" context="{'group_by':'registry_date'}"/>
+				<filter string="Fecha de Registro" name="filter_registry_date"/>
+				<filter string="Fecha de Registro" name="group_by_registry_date"/>
 			</search>
 		</field>
 	</record>

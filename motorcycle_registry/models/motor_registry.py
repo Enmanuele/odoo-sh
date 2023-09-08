@@ -47,13 +47,13 @@ class MotorcycleRegistry(models.Model):
 			_logger.warning(match_licence)
 			_logger.warning(match_vin)
 			
-			if record.license_plate != match_licence:
-				pass
-				#raise ValidationError(_('MATRICULA no coincide con el FORMATO requerido'))
+			if record.license_plate == None:
+				#pass
+				raise ValidationError(_('MATRICULA no coincide con el FORMATO requerido'))
 				
-			if record.vin != match_vin:
-				pass
-				#raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
+			if record.vin == None:
+				#pass
+				raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
 		
 		
 

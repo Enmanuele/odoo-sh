@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 	<data noupdate="0">
-		<record id="motor_category" model="ir.sequence">
+		<record id="motor_sequence_001" model="ir.sequence">
 			<field name="name">Secuencia para Registro de motocicletas</field>
 			<field name="code">moto-cod</field>
 			<field name="prefix">MRN</field>

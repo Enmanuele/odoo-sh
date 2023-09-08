@@ -39,21 +39,21 @@ class MotorcycleRegistry(models.Model):
 		pattern_license = '^[A-Z]{1,3}\d{1,4}[A-Z]{0,2}$'
 		pattern_vin = '^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{5}$'
 		
-		for record in self:
-			match_licence = re.match(pattern_license, record.license_plate)
-			match_vin = re.match(pattern_vin, record.vin)
+		# for record in self:
+			# #match_licence = re.match(pattern_license, record.license_plate)
+			# #match_vin = re.match(pattern_vin, record.vin)
 			
-			_logger.warning('/////////////////////')
-			_logger.warning(match_licence)
-			_logger.warning(match_vin)
+			# #_logger.warning('/////////////////////')
+			# #_logger.warning(match_licence)
+			# #_logger.warning(match_vin)
 			
-			if record.license_plate == None:
-				#pass
-				raise ValidationError(_('MATRICULA no coincide con el FORMATO requerido'))
+			# if record.license_plate == None:
+				# #pass
+				# raise ValidationError(_('MATRICULA no coincide con el FORMATO requerido'))
 				
-			if record.vin == None:
-				#pass
-				raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
+			# if record.vin == None:
+				# #pass
+				# raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
 		
 		
 

@@ -36,8 +36,8 @@ class MotorcycleRegistry(models.Model):
 	
 	@api.constrains('license_plate', 'vin')
 	def _restricciones_campos(self):
-		pattern_license = "^[A-Z]{1,3}\d{1,4}[A-Z]{0,2}$"
-		pattern_vin = "^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{5}$"
+		pattern_license = '^[A-Z]{1,3}\d{1,4}[A-Z]{0,2}$'
+		pattern_vin = '^[A-Z]{4}\d{2}[A-Z0-9]{2}\d{5}$'
 		
 		for record in self:
 			match_licence = re.match(pattern_license, record.license_plate)

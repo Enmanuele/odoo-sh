@@ -22,11 +22,12 @@ This Module is used to keep track of the Motorcycle Registration and Ownership o
 		"data/category_groups.xml",
 		"security/motor_groups.xml",
 		"security/ir.model.access.csv",
-		"data/demo.xml",
+		"data/data.xml",
+		"data/sequence_data.xml",
 		"views/motorcycle_view.xml",
 	],
 	"demo": [
-		"data/demo.xml",
+		"demo/demo.xml",
 	],
 	"images": [
 	],

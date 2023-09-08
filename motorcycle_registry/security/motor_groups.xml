@@ -12,8 +12,8 @@
 		</record>
 		<!-- Agregar por defecto usuario admin a nuestro grupo -->
 		<record id="base.user_admin" model="res.users">
-			<!-- <field name="groups_id" eval="[Command.link(ref('motorcycle_registry.motor_group_admin'))]"/> -->
-			<field name="groups_id" eval="[(4, ref('motorcycle_registry.motor_group_admin'))]"/>
+			<field name="groups_id" eval="[Command.link(ref('motorcycle_registry.motor_group_admin'))]"/>
+			<!-- <field name="groups_id" eval="[(4, ref('motorcycle_registry.motor_group_admin'))]"/> -->
 		</record>
 	</data>
 </odoo>

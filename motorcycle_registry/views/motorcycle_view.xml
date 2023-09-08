@@ -55,9 +55,9 @@
 					</group>
 					<group string="Grupo DOS">
 						<field name="current_mileage"/>
-						<field name="license_plate"/>
+						<field name="license_plate" placeholder="KLV453, KLR3453L"/>
 						<field name="registry_date"/>
-						<field name="vin"/>
+						<field name="vin" placeholder="KAIN220M00023, KAUK21XL84732"/>
 					</group>
 					<notebook>
                         <page string="Titulo de certificado">

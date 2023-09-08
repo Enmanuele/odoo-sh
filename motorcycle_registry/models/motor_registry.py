@@ -4,6 +4,10 @@ from odoo import models, fields, api, _
 import re
 from odoo.exceptions import ValidationError
 
+import logging
+_logger = logging.getLogger(__name__)
+
+
 class MotorcycleRegistry(models.Model):
 	_name = 'motorcycle.registry'
 	_description = 'Motorcycle Registry'
@@ -38,11 +42,18 @@ class MotorcycleRegistry(models.Model):
 		for record in self:
 			match_licence = re.match(pattern_license, record.license_plate)
 			match_vin = re.match(pattern_vin, record.vin)
+			
+			_logger.warning('/////////////////////')
+			_logger.warning(match_licence)
+			_logger.warning(match_vin)
+			
 			if record.license_plate != match_licence:
-				raise ValidationError(_('LICENCIA no coincide con el FORMATO requerido'))
+				pass
+				#raise ValidationError(_('MATRICULA no coincide con el FORMATO requerido'))
 				
 			if record.vin != match_vin:
-				raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
+				pass
+				#raise ValidationError(_('VIN no coincide con el FORMATO requerido'))
 		
 		
 

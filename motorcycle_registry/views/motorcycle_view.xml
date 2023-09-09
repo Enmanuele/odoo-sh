@@ -41,12 +41,10 @@
 		<field name="arch" type="xml">
 			<form string="Registro de motocicletas">
 				<sheet>
+					<field name="vehicle_image" widget="image" nolabel="1" class="oe_avatar"/>
 					<h1>
                         <field name="registry_number" class="oe_inline" />
                     </h1>
-					<group>
-						<field name="vehicle_image" widget="image" nolabel="1" class="oe_avatar"/>
-					</group>
 					<group>
 						<group string="Información de la motocicleta">
 							<field name="registry_date"/>

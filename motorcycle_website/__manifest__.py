@@ -15,6 +15,7 @@
 	"depends": ["website"
 	],
 	"data": [
+		"security/ir.model.access.csv",
 		"views/compare_web.xml",
 	],
 	"demo": [

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<template id="report_compare_motorcicle_product">
+            <t t-call="website.layout">
+				<div class="page" style="line-height: 75%">
+					<br/>
+					<h3>Comparativo de Motocicletas</h3>
+					<table class="table table-sm table-bordered table-striped text-center mt16 table-comparator">
+						<tbody style="display: grid; grid-template-columns: repeat(4,1fr);gap: 10px;">
+							<t t-foreach="motors" t-as="moto_attrs">
+								<!-- <t t-set="combination_info" -->
+								   <!-- t-value="wish.product_id._get_combination_info_variant()"/> -->
+								<tr style="display: grid; grid-template-rows: auto; grid-gap: 0px;">
+									<!-- <td class="td_grid"> -->
+									<th style="height: 35mm;" colspan="2">
+										<div>
+											<img t-attf-src="/web/image/product.template/#{moto_attrs.id}/image_128"
+											 class="img img-fluid" alt="Foto"/>
+										</div>
+									</th>
+									<th colspan="2">
+										<strong><t t-esc="moto_attrs.display_name"/></strong>
+									</th>
+									<th style="text-align: left;" colspan="2">
+										<strong>Especificaciones:</strong>
+									</th>
+									
+									<td>
+										<table class="table table-sm">
+											<tr>
+												<td style="text-align: left;">Fecha Lanzamiento: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.year"/></td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Rango: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.range"/></td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Caballos de Fuerza: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.horsepower"/> hp</td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Torque: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.torque"/></td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Velocidad Maxima: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.top_speed"/></td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Capacidad de Bateria: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.battery_capacity"/></td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">Peso: </td>
+												<td style="text-align: right;" width="30%"><t t-esc="moto_attrs.curb_weight"/></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</t>
+						</tbody>
+					</table>
+				</div>
+            </t>
+        </template>
+    </data>
+</odoo>

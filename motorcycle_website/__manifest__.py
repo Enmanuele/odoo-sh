@@ -12,7 +12,7 @@
 	"website": "https://odooes.com",
 	"description": """Motorcycle WebSite""",
 	
-	"depends": ["web"
+	"depends": ["website"
 	],
 	"data": [
 		"views/compare_web.xml",

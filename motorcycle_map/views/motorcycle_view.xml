@@ -10,10 +10,9 @@
 		<field name="name">Registro de motocicletas</field>
 		<field name="model">motorcycle.registry</field>
 		<field name="arch" type="xml">
-			<map res_partner="owner_id">
+			<map res_partner="owner_id" routing="false">
 				<field name="owner_id" string="Cliente"/>
 			</map>
 		</field>
 	</record>
-	
 </odoo>

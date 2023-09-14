@@ -12,7 +12,8 @@
 	"website": "https://odooes.com",
 	"description": """Motorcycle Map View""",
 	
-	"depends": ["motorcycle_registry"
+	"depends": [
+		"motorcycle_registry",
 	],
 	"data": [
 		"views/motorcycle_view.xml",

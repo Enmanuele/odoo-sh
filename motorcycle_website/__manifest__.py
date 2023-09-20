@@ -12,7 +12,8 @@
 	"website": "https://odooes.com",
 	"description": """Motorcycle WebSite""",
 	
-	"depends": ["website"
+	"depends": [
+		"website", "motorcycle_stock"
 	],
 	"data": [
 		"security/ir.model.access.csv",

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 class ProductTemplateInherit(models.Model):
 	_inherit = 'product.template'
@@ -17,9 +17,23 @@ class ProductTemplateInherit(models.Model):
 	make = fields.Char('Marca')
 	model = fields.Char('Modelo')
 	year = fields.Char('Año')
+	#name = fields.Char(compute='_name_motorcycle')
+	name = fields.Char('Name', index='trigram', required=True, translate=True)
 	
 	
 	def _detailed_type_mapping(self):
 		type_mapping = super()._detailed_type_mapping()
 		type_mapping['motorcycle'] = 'product'
 		return type_mapping
+		
+		
+	@api.onchange('make', 'model', 'year')
+	def _name_motorcycle(self):
+		for record in self:
+			if record.detailed_type == 'motorcycle':
+				make = record.make if record.make else ''
+				model = record.model if record.model else ''
+				year = record.year if record.year else ''
+				record.name = year + ' ' + make + ' ' + model
+			else:
+				record.name = record.name
